@@ -1,0 +1,266 @@
+/* rolagem da tela */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/* Reset padrão */
+
+body{
+    background-color: #f4f9ff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    background-color: #457b9d;
+    color: #f1faee;
+}
+
+.logo, .icone-central, nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    justify-content: flex-start;
+  }
+  
+  nav {
+    justify-content: flex-end;
+  }
+
+header a{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.destaque-logo{
+    color: #c1121f;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a{
+    font-size: 1rem;;
+    padding: 8px 11px;
+    color: #f1faee;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    background-color: #1d3557;
+    color: #f1faee;
+    border-radius: 1.4rem;
+}
+
+/* Banner principal*/
+
+.banner-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1d3557;
+    border-radius: 0.8rem;
+}
+
+.titulo-principal{
+    max-width: 50%;
+}
+
+h1{
+    color: white;
+    font-size: 5rem;
+}
+
+/* seções de genero*/
+
+.secao-generos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    padding: 3rem;
+    background-color: #ad2831;
+}
+
+.genero-serie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1faee;
+    border: 2px solid #1d3557;
+    border-radius: 1rem;
+    width: 240px;
+    height: 530px;
+    padding: 1rem;
+    transition: transform 0.4s;
+}
+
+.genero-serie img{
+    width: 230px ;
+    height: 260px;
+    border-radius: 0.8rem;
+}
+
+.genero-serie h3{
+    color: #457b9d;
+}
+
+.genero-serie p{
+    flex-grow: 1;
+    text-align: center;
+    color: #1d3557;
+    font-weight: bold;
+}
+
+.genero-serie:hover {
+    transform: scale(1.02);
+}
+
+.genero-serie a{
+    text-decoration: none;
+    background-color: #457b9d;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.genero-serie a:hover{
+    background-color: #1d3557;
+    color: #f1faee;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #1d355780;
+}
+
+/* rodapé */
+
+footer{
+    background-color: #457b9d;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+.redes-sociais a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #f1faee;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.redes-sociais a:hover {
+    background-color: #1d3557;
+}
+
+/* responsividade */
+
+@media (max-width: 1024px) {
+    .banner-principal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulo-principal {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .banner-principal {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .banner-principal img{
+        width: 200px;
+    }
+
+    .genero-serie {
+        width: 90%;
+        height: auto;
+    }
+
+    .genero-serie img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo a {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .icone-central img {
+        width: 40px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .genero-serie {
+        padding: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+    .redes-sociais a {
+        font-size: 1.5rem;
+    }
+}
